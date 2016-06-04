@@ -28,11 +28,11 @@ menu Enc.utf-8      :e ++enc=utf-8<CR>
 menu Enc.ucs-2le    :e ++enc=ucs-2le<CR>
 map  <F8> :emenu Enc.<Tab>
 
-" ne skakat' po dlinnym strokam
-noremap  <C-down> gj
-inoremap <C-down> <C-o>gj
-noremap  <C-up>   gk
-inoremap <C-up>   <C-o>gk
+" Treat long lines as break lines (useful when moving around in them)
+noremap  <C-j> gj
+inoremap <C-j> <C-o>gj
+noremap  <C-k> gk
+inoremap <C-k> <C-o>gk
 
 set laststatus=2        " always show statusline
 set statusline=%F       "full filename
@@ -68,6 +68,8 @@ imap ;for for($i=0; $i<; $i++){}<left><left><left><left><left><left><left><left>
 " when close buffer by \q, force load previous one in its window
 nnoremap <leader>q :bp<cr>:bd #<cr>
 
+" Set to auto read when a file is changed from the outside
+set autoread
 
 " disable arrow keys in normal mode
 nnoremap <Up> :echomsg "use k"<cr>
