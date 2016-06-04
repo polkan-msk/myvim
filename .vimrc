@@ -71,6 +71,10 @@ nnoremap <leader>q :bp<cr>:bd #<cr>
 " Set to auto read when a file is changed from the outside
 set autoread
 
+" show tabs as dots
+set listchars=tab:··
+set list
+
 " disable arrow keys in normal mode
 nnoremap <Up> :echomsg "use k"<cr>
 nnoremap <Down> :echomsg "use j"<cr>
