@@ -75,9 +75,13 @@ set autoread
 set listchars=tab:··
 set list
 
+" set 3 lile offset while page scroll
+set scrolloff=3
+
+
+
 " disable arrow keys in normal mode
 nnoremap <Up> :echomsg "use k"<cr>
 nnoremap <Down> :echomsg "use j"<cr>
 nnoremap <Left> :echomsg "use h"<cr>
 nnoremap <Right> :echomsg "use l"<cr>
-
