@@ -66,6 +66,9 @@ imap ;for for($i=0; $i<; $i++){}<left><left><left><left><left><left><left><left>
 " when close buffer by \q, force load previous one in its window
 nnoremap <leader>q :bp<cr>:bd #<cr>
 
+" map \n for toggle nerd-tree
+nnoremap <leader>n :NERDTreeToggle<cr>
+
 " Set to auto read when a file is changed from the outside
 set autoread
 
