@@ -76,7 +76,9 @@ set list
 " set 3 lile offset while page scroll
 set scrolloff=3
 
-
+" folding
+set foldcolumn=3    " folding column width
+nnoremap ff va{zf   " create and close fold in {}
 
 " disable arrow keys in normal mode
 nnoremap <Up> :echomsg "use k"<cr>
