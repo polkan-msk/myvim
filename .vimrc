@@ -47,20 +47,18 @@ set statusline+=%l:%L   "cursor line/total lines
 set statusline+=\ \ \ %P    "percent through file
 function! StatuslineColor(mode)
     if a:mode == 'i'
-        hi StatusLine ctermbg=black ctermfg=yellow
-    elseif a:mode == 'r'
         hi StatusLine ctermbg=black ctermfg=brown
-    elseif a:mode == 'v'
-        hi StatusLine ctermbg=black ctermfg=blue
+    elseif a:mode == 'r'
+        hi StatusLine ctermbg=black ctermfg=yellow
     else
         hi StatusLine ctermbg=black ctermfg=red
     endif
 endfunction
 au InsertEnter * call StatuslineColor(v:insertmode)
 au InsertChange * call StatuslineColor(v:insertmode)
-au InsertLeave * hi StatusLine ctermbg=black ctermfg=green
+au InsertLeave * hi StatusLine ctermbg=black ctermfg=gray
 " default the statusline to green when entering Vim
-hi StatusLine ctermbg=black ctermfg=green
+hi StatusLine ctermbg=black ctermfg=gray
 
 " type ;for to insert for expression
 imap ;for for($i=0; $i<; $i++){}<left><left><left><left><left><left><left><left><left>
