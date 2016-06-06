@@ -83,6 +83,15 @@ set scrolloff=3
 set foldcolumn=3    " folding column width
 nnoremap ff va{zf   " create and close fold in {}
 
+" replace every tab with 4 space
+:command Fucktabs %s/	/    /gc
+" mark 121'th column
+set colorcolumn=120
+" mark background when row length becomes more than 80
+"highlight OverLength ctermbg=darkgray ctermfg=white
+"highlight OverLength ctermbg=darkgray
+"match OverLength /\%81v.\+/
+
 " disable arrow keys in normal mode
 nnoremap <Up> :echomsg "use k"<cr>
 nnoremap <Down> :echomsg "use j"<cr>
