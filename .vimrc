@@ -13,7 +13,7 @@ set shiftwidth=4		" ---//---
 set smarttab			" mass empty symbols treatment
 set expandtab			" spaces instead of tabs
 set smartindent			" auto text indents
-:nnoremap <F11> :set smartindent!<return>    " on/off auto text indent
+:nnoremap <F10> :set smartindent!<return>    " on/off auto text indent
 
 set wildmenu                    " show menu on tab navigation
 set fileencodings=utf8,cp1251   " try encodings on file open
@@ -47,18 +47,19 @@ set statusline+=%l:%L   "cursor line/total lines
 set statusline+=\ \ \ %P    "percent through file
 function! StatuslineColor(mode)
     if a:mode == 'i'
-        hi StatusLine ctermbg=black ctermfg=brown
+        hi StatusLine ctermbg=white ctermfg=red
     elseif a:mode == 'r'
-        hi StatusLine ctermbg=black ctermfg=yellow
+        hi StatusLine ctermbg=white ctermfg=brown
     else
-        hi StatusLine ctermbg=black ctermfg=red
+        hi StatusLine ctermbg=black ctermfg=yellow
     endif
 endfunction
 au InsertEnter * call StatuslineColor(v:insertmode)
 au InsertChange * call StatuslineColor(v:insertmode)
-au InsertLeave * hi StatusLine ctermbg=black ctermfg=gray
+au InsertLeave * hi StatusLine ctermbg=black ctermfg=green
 " default the statusline to green when entering Vim
-hi StatusLine ctermbg=black ctermfg=gray
+hi StatusLine ctermbg=black ctermfg=green
+
 
 " type ;for to insert for expression
 imap ;for for($i=0; $i<; $i++){}<left><left><left><left><left><left><left><left><left>
@@ -93,7 +94,7 @@ set colorcolumn=120
 "match OverLength /\%81v.\+/
 
 " disable arrow keys in normal mode
-nnoremap <Up> :echomsg "use k"<cr>
-nnoremap <Down> :echomsg "use j"<cr>
-nnoremap <Left> :echomsg "use h"<cr>
-nnoremap <Right> :echomsg "use l"<cr>
+nnoremap <Up> :echomsg "k"<cr>
+nnoremap <Down> :echomsg "j"<cr>
+nnoremap <Left> :echomsg "h"<cr>
+nnoremap <Right> :echomsg "l"<cr>
