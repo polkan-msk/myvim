@@ -1,5 +1,6 @@
 syntax on			" syntax highlight
 colorscheme peachpuff
+filetype plugin on
 set backup 			" make backup files
 set backupdir=~/.vimbackups 	" where to put backup files
 set ignorecase                  " case insensetive search
