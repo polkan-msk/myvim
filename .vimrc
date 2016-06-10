@@ -7,7 +7,7 @@ set ignorecase                  " case insensetive search
 set incsearch                   " incremental search
 set showmatch                   " highlight the brackets
 set number
-:nnoremap <F7> :set hlsearch!<return>   " on/off search matches hihglights 
+:nnoremap <F7> :set hlsearch!<return>   " on/off search matches hihglights
 :nnoremap <F12> :set number!<return>    " on/off line numbers
 set tabstop=4			" tab 4 symbols
 set shiftwidth=4		" ---//---
@@ -90,6 +90,11 @@ nnoremap ff va{zf   " create and close fold in {}
 
 " replace every tab with 4 space
 :command Fucktabs %s/	/    /gc
+" remove trailing spaces
+:command Fuckspaces %s/\s\+$//gc
+" show trailing spaces
+:command Showspaces /\s\+$
+
 " mark 121'th column
 set colorcolumn=120
 " mark background when row length becomes more than 80
