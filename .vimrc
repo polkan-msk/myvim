@@ -30,11 +30,18 @@ menu Enc.ucs-2le    :e ++enc=ucs-2le<CR>
 map  <F8> :emenu Enc.<Tab>
 
 " Treat long lines as break lines (useful when moving around in them)
-noremap  <C-j> gj
-inoremap <C-j> <C-o>gj
-noremap  <C-k> gk
-inoremap <C-k> <C-o>gk
+noremap  <C-down> gj
+inoremap <C-down> <C-o>gj
+noremap  <C-up> gk
+inoremap <C-up> <C-o>gk
 
+" navigate windows by Ctrl-h,j,k,l
+noremap  <C-h> <C-w>h
+noremap  <C-j> <C-w>j
+noremap  <C-k> <C-w>k
+noremap  <C-l> <C-w>l
+
+" statusline
 set laststatus=2        " always show statusline
 set statusline=%F       "full filename
 set statusline+=\ [%{strlen(&fenc)?&fenc:'none'}, "file encoding
