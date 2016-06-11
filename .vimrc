@@ -70,9 +70,9 @@ nnoremap <leader>q :bp<cr>:bd #<cr>
 
 " map \n for toggle nerd-tree
 nnoremap <leader>n :NERDTreeToggle<cr>
-" map \t for toggle taglist
-nnoremap <leader>t :TlistToggle<cr>
-let Tlist_GainFocus_On_ToggleOpen = 1
+" map \t for toggle tagbar
+nnoremap <leader>t :TagbarToggle<cr>
+let g:tagbar_autofocus=1
 
 " Set to auto read when a file is changed from the outside
 set autoread
