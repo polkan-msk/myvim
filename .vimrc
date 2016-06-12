@@ -35,6 +35,12 @@ inoremap <C-down> <C-o>gj
 noremap  <C-up> gk
 inoremap <C-up> <C-o>gk
 
+" H J K L for large steps
+noremap  H 50h
+noremap  J 20j
+noremap  K 20k
+noremap  L 50l
+
 " navigate windows by Ctrl-h,j,k,l
 noremap  <C-h> <C-w>h
 noremap  <C-j> <C-w>j
