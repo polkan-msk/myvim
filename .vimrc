@@ -108,12 +108,27 @@ nnoremap ff va{zf   " create and close fold in {}
 " show trailing spaces
 :command Showspaces /\s\+$
 
-" mark 121'th column
-set colorcolumn=120
-" mark background when row length becomes more than 80
+" mark 81'th column
+set colorcolumn=80
+" mark background when row length becomes more than 120
 "highlight OverLength ctermbg=darkgray ctermfg=white
-"highlight OverLength ctermbg=darkgray
-"match OverLength /\%81v.\+/
+"highlight OverLength ctermbg=darkred
+"match OverLength /\%121v.\+/
+
+command! ClearBuffers call s:ClearBuffers()
+function! s:ClearBuffers()
+  let open_buffers = []
+
+  for i in range(tabpagenr('$'))
+    call extend(open_buffers, tabpagebuflist(i + 1))
+  endfor
+
+  for num in range(1, bufnr("$") + 1)
+    if buflisted(num) && index(open_buffers, num) == -1
+      exec "bdelete ".num
+    endif
+  endfor
+endfunction
 
 " disable arrow keys in normal mode
 nnoremap <Up> :echomsg "k"<cr>
