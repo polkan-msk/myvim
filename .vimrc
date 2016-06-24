@@ -1,6 +1,7 @@
 syntax on			" syntax highlight
 colorscheme peachpuff
 filetype plugin on
+let mapleader = "\<Space>"
 set backup 			" make backup files
 set backupdir=~/.vimbackups 	" where to put backup files
 set ignorecase                  " case insensetive search
