@@ -76,8 +76,11 @@ au InsertLeave * hi StatusLine ctermbg=black ctermfg=green
 hi StatusLine ctermbg=black ctermfg=green
 
 
+" type ;ppp to insert debug print_r
+inoremap ;ppp print_r(); exit;<left><left><left><left><left><left><left><left>
+noremap ;ppp i print_r(); exit;<left><left><left><left><left><left><left><left>
 " type ;for to insert for expression
-imap ;for for($i=0; $i<; $i++){}<left><left><left><left><left><left><left><left><left>
+inoremap ;for for($i=0; $i<; $i++){}<left><left><left><left><left><left><left><left><left>
 
 " when close buffer by \q, force load previous one in its window
 nnoremap <leader>q :bp<cr>:bd #<cr>
@@ -99,7 +102,7 @@ set list
 set scrolloff=3
 
 " folding
-set foldcolumn=3    " folding column width
+set foldcolumn=2    " folding column width
 nnoremap ff va{zf   " create and close fold in {}
 
 " replace every tab with 4 space
