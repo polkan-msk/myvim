@@ -50,7 +50,8 @@ noremap  <C-l> <C-w>l
 
 " statusline
 set laststatus=2        " always show statusline
-set statusline=%F       "full filename
+set statusline=[%n]     "buffer number
+set statusline+=%F      "full filename
 set statusline+=\ [%{strlen(&fenc)?&fenc:'none'}, "file encoding
 set statusline+=%{&ff}] "file format
 set statusline+=%h      "help file flag
