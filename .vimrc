@@ -47,11 +47,14 @@ noremap  <C-h> <C-w>h
 noremap  <C-j> <C-w>j
 noremap  <C-k> <C-w>k
 noremap  <C-l> <C-w>l
+" navigate tabs by Ctrl-Shift-j,k
+"noremap  <S-C-j> gT
+"noremap  <S-C-k> gt
 
 " statusline
 set laststatus=2        " always show statusline
-set statusline=[%n]     "buffer number
-set statusline+=%F      "full filename
+set statusline=%F       "full filename
+set statusline+=(%n)    "buffer number
 set statusline+=\ [%{strlen(&fenc)?&fenc:'none'}, "file encoding
 set statusline+=%{&ff}] "file format
 set statusline+=%h      "help file flag
@@ -86,11 +89,19 @@ inoremap ;for for($i=0; $i<; $i++){}<left><left><left><left><left><left><left><l
 " when close buffer by \q, force load previous one in its window
 nnoremap <leader>q :bp<cr>:bd #<cr>
 
+" <leader>tt to open current buffer in new tab without closing current one
+nnoremap <leader>tt :tab sb%<cr>
+
 " map \n for toggle nerd-tree
 nnoremap <leader>n :NERDTreeToggle<cr>
 " map \t for toggle tagbar
 nnoremap <leader>t :TagbarToggle<cr>
 let g:tagbar_autofocus=1
+
+"redefine bufexplorer plugin mapping
+nnoremap <leader>bi :BufExplorerHorizontalSplit<cr>
+nnoremap <leader>bs :BufExplorerVerticalSplit<cr>
+nnoremap <leader>bb :ToggleBufExplorer<cr>
 
 " Set to auto read when a file is changed from the outside
 set autoread
