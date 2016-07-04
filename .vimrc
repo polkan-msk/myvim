@@ -89,12 +89,15 @@ inoremap ;for for($i=0; $i<; $i++){}<left><left><left><left><left><left><left><l
 " when close buffer by \q, force load previous one in its window
 nnoremap <leader>q :bp<cr>:bd #<cr>
 
-" <leader>tt to open current buffer in new tab without closing current one
-nnoremap <leader>tt :tab sb%<cr>
+" <ctrl-w>t to open current buffer in new tab without closing current one
+nnoremap <c-w>t :tab sb%<cr>
+" <ctrl-w>T do the same but it closes window in current tab
 
-" map \n for toggle nerd-tree
+" map <leader>n for toggle nerd-tree
 nnoremap <leader>n :NERDTreeToggle<cr>
-" map \t for toggle tagbar
+" map <leader>gn for go to current file in nerd-tree
+nnoremap <leader>gn :NERDTreeFind<cr>
+" map <leader>t for toggle tagbar
 nnoremap <leader>t :TagbarToggle<cr>
 let g:tagbar_autofocus=1
 
