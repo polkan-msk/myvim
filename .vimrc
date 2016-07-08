@@ -47,9 +47,6 @@ noremap  <C-h> <C-w>h
 noremap  <C-j> <C-w>j
 noremap  <C-k> <C-w>k
 noremap  <C-l> <C-w>l
-" navigate tabs by Ctrl-Shift-j,k
-"noremap  <S-C-j> gT
-"noremap  <S-C-k> gt
 
 " statusline
 set laststatus=2        " always show statusline
@@ -79,12 +76,10 @@ au InsertLeave * hi StatusLine ctermbg=black ctermfg=green
 " default the statusline to green when entering Vim
 hi StatusLine ctermbg=black ctermfg=green
 
-
-" type ;ppp to insert debug print_r
-inoremap ;ppp print_r(); exit;<left><left><left><left><left><left><left><left>
-noremap ;ppp i print_r(); exit;<left><left><left><left><left><left><left><left>
+" ;ppp to insert debug print_r
+noremap ;ppp i echo '<pre>'.print_r( ,1).'</pre>'; exit;<left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left>
 " type ;for to insert for expression
-inoremap ;for for($i=0; $i<; $i++){}<left><left><left><left><left><left><left><left><left>
+"inoremap ;for for($i=0; $i<; $i++){}<left><left><left><left><left><left><left><left><left>
 
 " when close buffer by \q, force load previous one in its window
 nnoremap <leader>q :bp<cr>:bd #<cr>
