@@ -82,7 +82,7 @@ noremap ;ppp i echo '<pre>'.print_r( ,1).'</pre>'; exit;<left><left><left><left>
 "inoremap ;for for($i=0; $i<; $i++){}<left><left><left><left><left><left><left><left><left>
 
 " when close buffer by \q, force load previous one in its window
-nnoremap <leader>q :bp<cr>:bd #<cr>
+nnoremap <leader>q :bp<cr>:bw #<cr>
 
 " <ctrl-w>t to open current buffer in new tab without closing current one
 nnoremap <c-w>t :tab sb%<cr>
@@ -139,7 +139,8 @@ function! s:ClearBuffers()
 
   for num in range(1, bufnr("$") + 1)
     if buflisted(num) && index(open_buffers, num) == -1
-      exec "bdelete ".num
+      exec "bwipeout ".num
+      "bdelete can be used instead of bdelete
     endif
   endfor
 endfunction
