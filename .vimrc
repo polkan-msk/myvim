@@ -154,6 +154,15 @@ function! s:ClearBuffers()
   endfor
 endfunction
 
+"check current file php syntax by ctrl-f5
+map <F5> :!php -l %<CR>
+
+"To begin diffing on all visible windows:
+":windo diffthis
+"To end diff mode:
+":diffoff!
+"The ! makes diffoff apply to all windows of the current tab
+
 " disable arrow keys in normal mode
 nnoremap <Up> :echomsg "k"<cr>
 nnoremap <Down> :echomsg "j"<cr>
