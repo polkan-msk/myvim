@@ -164,7 +164,7 @@ map <F5> :!php -l %<CR>
 "The ! makes diffoff apply to all windows of the current tab
 
 " disable arrow keys in normal mode
-nnoremap <Up> :echomsg "k"<cr>
-nnoremap <Down> :echomsg "j"<cr>
-nnoremap <Left> :echomsg "h"<cr>
-nnoremap <Right> :echomsg "l"<cr>
+"nnoremap <Up> :echomsg "k"<cr>
+"nnoremap <Down> :echomsg "j"<cr>
+"nnoremap <Left> :echomsg "h"<cr>
+"nnoremap <Right> :echomsg "l"<cr>
