@@ -8,6 +8,7 @@ set ignorecase                  " case insensetive search
 set incsearch                   " incremental search
 set showmatch                   " highlight the brackets
 set number
+:nnoremap <F6> :set ignorecase!<return> " on/off ignorecase 
 :nnoremap <F7> :set hlsearch!<return>   " on/off search matches hihglights
 :nnoremap <F12> :set number!<return>    " on/off line numbers
 set tabstop=4			" tab 4 symbols
