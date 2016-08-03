@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!-- @see https://pear.php.net/manual/en/package.php.php-codesniffer.annotated-ruleset.php -->
+<ruleset name="My Custom CS Rules">
+    <description>My custom coding standard</description>
+    <rule ref="PEAR">
+        <exclude name="PEAR.Commenting.FileComment.IncompleteLicense"/>
+        <exclude name="PEAR.Commenting.FileComment.MissingLinkTag"/>
+        <exclude name="PEAR.Commenting.FileComment.MissingVersion"/>
+        <exclude name="PEAR.Commenting.FileComment.MissingLicenseTag"/>
+        <exclude name="Generic.Commenting.DocComment.ShortNotCapital"/>
+    </rule>
+    <rule ref="Generic.Files.LineLength">
+        <properties>
+            <property name="lineLimit" value="10000"/> <!-- warning (no need it) -->
+            <property name="absoluteLineLimit" value="120"/> <!-- error -->
+        </properties>
+    </rule>
+</ruleset>

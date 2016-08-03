@@ -168,3 +168,6 @@ map <F5> :!php -l %<CR>
 "nnoremap <Down> :echomsg "j"<cr>
 "nnoremap <Left> :echomsg "h"<cr>
 "nnoremap <Right> :echomsg "l"<cr>
+
+" Set the codesniffer args (plugin PHP QA Tools For Vim + phpcs)
+let g:phpqa_codesniffer_args = "--standard=~/.vim/phpcs_custom_ruleset.xml -s"
