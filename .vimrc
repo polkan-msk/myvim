@@ -180,3 +180,7 @@ nmap [h <Plug>GitGutterPrevHunk
 " <leader>hp preview hunk
 " <leader>hu undo hunk
 " ctrl-wz close preview window
+
+" to highlight .template files like html-source
+" (http://beerpla.net/2008/04/02/how-to-add-a-vim-file-extension-to-syntax-highlighting/)
+au BufNewFile,BufRead *.template set filetype=html
