@@ -8,6 +8,12 @@
         <exclude name="PEAR.Commenting.FileComment.MissingVersion"/>
         <exclude name="PEAR.Commenting.FileComment.MissingLicenseTag"/>
         <exclude name="Generic.Commenting.DocComment.ShortNotCapital"/>
+        <exclude name="PEAR.Commenting.ClassComment.MissingCategoryTag"/>
+        <exclude name="PEAR.Commenting.ClassComment.MissingPackageTag"/>
+        <exclude name="PEAR.Commenting.ClassComment.MissingAuthorTag"/>
+        <exclude name="PEAR.Commenting.ClassComment.MissingLicenseTag"/>
+        <exclude name="PEAR.Commenting.ClassComment.MissingLinkTag"/>
+        <exclude name="PEAR.WhiteSpace.ScopeIndent.IncorrectExact"/>
     </rule>
     <rule ref="Generic.Files.LineLength">
         <properties>

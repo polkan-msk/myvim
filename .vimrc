@@ -171,6 +171,7 @@ map <F5> :!php -l %<CR>
 
 " Set the codesniffer args (plugin PHP QA Tools For Vim + phpcs)
 let g:phpqa_codesniffer_args = "--standard=~/.vim/phpcs_custom_ruleset.xml -s"
+let g:phpqa_messdetector_ruleset = "~/.vim/phpmd_custom_ruleset.xml"
 
 " Reduce update screen time to 250ms
 set updatetime=250
