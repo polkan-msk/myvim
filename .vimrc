@@ -8,7 +8,7 @@ set ignorecase                  " case insensetive search
 set incsearch                   " incremental search
 set showmatch                   " highlight the brackets
 set number
-:nnoremap <F6> :set ignorecase!<return> " on/off ignorecase 
+:nnoremap <F6> :set ignorecase!<return> " on/off ignorecase
 :nnoremap <F7> :set hlsearch!<return>   " on/off search matches hihglights
 :nnoremap <F12> :set number!<return>    " on/off line numbers
 set tabstop=4			" tab 4 symbols
@@ -185,3 +185,20 @@ nmap [h <Plug>GitGutterPrevHunk
 " to highlight .template files like html-source
 " (http://beerpla.net/2008/04/02/how-to-add-a-vim-file-extension-to-syntax-highlighting/)
 au BufNewFile,BufRead *.template set filetype=html
+" you can set highlight for current file as follow:
+" :set syntax=html
+
+" CTAGS
+" Ctrl-] goto definition
+" Ctrl-t go back
+" g] - list of definitions ( use Ctrl-w-t before to open buffer in new tab )
+" [i - show first line with current tag in file
+" ]i - show first line with current tag in file (from current position)
+" [I - show all match of current tag in file
+" ]I - show all match of current tag in file (from current position)
+" open definition in new tab
+map <c-\> :tab split<CR>:exec("tselect ".expand("<cword>"))<CR>
+" open definition in vertical split
+"map <???>  :vsp <CR>:exec("tselect ".expand("<cword>"))<CR>
+
+
