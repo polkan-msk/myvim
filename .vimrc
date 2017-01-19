@@ -201,4 +201,6 @@ map <c-\> :tab split<CR>:exec("tselect ".expand("<cword>"))<CR>
 " open definition in vertical split
 "map <???>  :vsp <CR>:exec("tselect ".expand("<cword>"))<CR>
 
+" disable autocomment next line by enter
+set formatoptions-=r
 
