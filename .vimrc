@@ -204,3 +204,5 @@ map <c-\> :tab split<CR>:exec("tselect ".expand("<cword>"))<CR>
 " disable autocomment next line by enter
 set formatoptions-=r
 
+" indent xml files on gg=G
+au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
