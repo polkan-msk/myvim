@@ -1,5 +1,5 @@
 syntax on			" syntax highlight
-colorscheme peachpuff
+colorscheme default
 filetype plugin on
 let mapleader = "\<Space>"
 set backup 			" make backup files
@@ -121,7 +121,7 @@ set list
 set scrolloff=3
 
 " folding
-set foldcolumn=2    " folding column width
+"set foldcolumn=2    " folding column width
 nnoremap ff va{zf   " create and close fold in {}
 
 " replace every tab with 4 space
