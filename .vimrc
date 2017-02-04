@@ -1,3 +1,5 @@
+execute pathogen#infect()
+
 syntax on			" syntax highlight
 colorscheme default
 filetype plugin on
