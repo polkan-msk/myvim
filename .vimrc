@@ -2,6 +2,10 @@ execute pathogen#infect()
 
 syntax on			" syntax highlight
 colorscheme default
+"highlight Constant ctermfg=DarkGray
+"colorscheme lucius
+"set background=dark
+
 filetype plugin on
 let mapleader = "\<Space>"
 set backup 			" make backup files
@@ -132,6 +136,8 @@ nnoremap ff va{zf   " create and close fold in {}
 :command Fuckspaces %s/\s\+$//gc
 " show trailing spaces
 :command Showspaces /\s\+$
+" set color of constants to gray
+:command Grconst highlight Constant ctermfg=DarkGray
 
 " mark 81'th column
 set colorcolumn=80

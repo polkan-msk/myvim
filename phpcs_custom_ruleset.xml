@@ -14,6 +14,8 @@
         <exclude name="PEAR.Commenting.ClassComment.MissingLicenseTag"/>
         <exclude name="PEAR.Commenting.ClassComment.MissingLinkTag"/>
         <exclude name="PEAR.WhiteSpace.ScopeIndent.IncorrectExact"/>
+        <exclude name="PEAR.NamingConventions.ValidFunctionName.PublicUnderscore"/>
+        <exclude name="PEAR.Commenting.FunctionComment.MissingParamComment"/>
     </rule>
     <rule ref="Generic.Files.LineLength">
         <properties>
