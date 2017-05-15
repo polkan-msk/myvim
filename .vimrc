@@ -53,10 +53,6 @@ noremap  <C-j> <C-w>j
 noremap  <C-k> <C-w>k
 noremap  <C-l> <C-w>l
 
-" navigate tabs by Shift-h,l
-noremap  H gT
-noremap  L gt
-
 " resize window
 nnoremap <s-up> :res+7<cr>
 nnoremap <s-down> :res-7<cr>
