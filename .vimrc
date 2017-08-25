@@ -177,8 +177,8 @@ map <F5> :!php -l %<CR>
 let g:phpqa_codesniffer_args = "--standard=~/.vim/phpcs_custom_ruleset.xml -s"
 let g:phpqa_messdetector_ruleset = "~/.vim/phpmd_custom_ruleset.xml"
 
-" Reduce update screen time to 250ms
-set updatetime=250
+" Reduce update screen time to 500ms
+set updatetime=500
 " vim-gitgutter plugin
 nmap ]h <Plug>GitGutterNextHunk
 nmap [h <Plug>GitGutterPrevHunk
@@ -210,3 +210,8 @@ set formatoptions-=r
 
 " indent xml files on gg=G
 au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
+
+" goto last active tab by <leader>gt
+let g:lasttab = 1
+nmap <Leader>gt :exe "tabn ".g:lasttab<CR>
+au TabLeave * let g:lasttab = tabpagenr()
