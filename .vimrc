@@ -173,10 +173,6 @@ map <F5> :!php -l %<CR>
 "nnoremap <Left> :echomsg "h"<cr>
 "nnoremap <Right> :echomsg "l"<cr>
 
-" Set the codesniffer args (plugin PHP QA Tools For Vim + phpcs)
-let g:phpqa_codesniffer_args = "--standard=~/.vim/phpcs_custom_ruleset.xml -s"
-let g:phpqa_messdetector_ruleset = "~/.vim/phpmd_custom_ruleset.xml"
-
 " Reduce update screen time to 500ms
 set updatetime=500
 " vim-gitgutter plugin
