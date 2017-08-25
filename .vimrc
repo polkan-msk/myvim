@@ -8,8 +8,6 @@ colorscheme default
 
 filetype plugin on
 let mapleader = "\<Space>"
-set backup 			" make backup files
-set backupdir=~/.vimbackups 	" where to put backup files
 set ignorecase                  " case insensetive search
 set incsearch                   " incremental search
 set showmatch                   " highlight the brackets
@@ -42,10 +40,6 @@ noremap  <C-down> gj
 inoremap <C-down> <C-o>gj
 noremap  <C-up> gk
 inoremap <C-up> <C-o>gk
-
-" H J K L for large steps
-noremap  J 20j
-noremap  K 20k
 
 " navigate windows by Ctrl-h,j,k,l
 noremap  <C-h> <C-w>h
