@@ -205,3 +205,15 @@ au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
 let g:lasttab = 1
 nmap <Leader>gt :exe "tabn ".g:lasttab<CR>
 au TabLeave * let g:lasttab = tabpagenr()
+
+" remove variables from tagbar
+let g:tagbar_type_php  = {
+\ 'ctagstype' : 'php',
+\ 'kinds'     : [
+    \ 'i:interfaces',
+    \ 'c:classes',
+    \ 'd:constant definitions',
+    \ 'f:functions',
+    \ 'j:javascript functions:1'
+\ ]
+\ }
