@@ -82,12 +82,15 @@ au InsertLeave * hi StatusLine ctermbg=black ctermfg=green
 hi StatusLine ctermbg=black ctermfg=green
 
 " ;ppp to insert debug print_r
-noremap ;ppp i echo '<pre>'.print_r( ,1).'</pre>'; exit;<left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left>
+noremap ;ppp iecho '<pre>'.print_r(, true).'</pre>'; exit;<left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left>
 " type ;for to insert for expression
 "inoremap ;for for($i=0; $i<; $i++){}<left><left><left><left><left><left><left><left><left>
+inoremap func<space> function ()<cr>{<cr>}<up><up><esc><s-o>/**<cr><space>*<cr>*/<down><esc><s-a><left><left>
+inoremap /**<cr> /**<cr><space>*<cr>*/<up><space>
+inoremap /**<space> /**<space><space>*/<left><left><left>@var<space>
 
 " when close buffer by \q, force load previous one in its window
-nnoremap <leader>q :bp<cr>:bw #<cr>
+"nnoremap <leader>q :bp<cr>:bw #<cr>
 
 " <ctrl-w>t to open current buffer in new tab without closing current one
 nnoremap <c-w>t :tab sb%<cr>
