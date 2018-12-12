@@ -1,10 +1,10 @@
 execute pathogen#infect()
 
 syntax on			" syntax highlight
-colorscheme default
+"colorscheme default
 "highlight Constant ctermfg=DarkGray
-"colorscheme lucius
-"set background=dark
+colorscheme PaperColor
+set background=dark
 
 filetype plugin on
 let mapleader = "\<Space>"
