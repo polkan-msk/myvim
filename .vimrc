@@ -214,6 +214,9 @@ set formatoptions-=r
 " indent xml files on gg=G
 au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
 
+" format json file
+com! FormatJSON %!python -m json.tool
+
 " goto last active tab by <leader>gt
 let g:lasttab = 1
 nmap <Leader>gt :exe "tabn ".g:lasttab<CR>
